@@ -1,5 +1,5 @@
 /**
- * vue-router v2.0.2
+ * vue-router v2.0.2-alpha
  * (c) 2016 Evan You
  * @license MIT
  */
@@ -1014,7 +1014,7 @@ function addRouteRecord (
     }
   }
 
-  pathMap[record.path] = record
+  if (!pathMap[record.path]) { pathMap[record.path] = record }
   if (name) {
     if (!nameMap[name]) {
       nameMap[name] = record
